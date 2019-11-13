@@ -1,3 +1,3 @@
 # IFG
-This project is about my classes related to ORM.
-Several improvements are needed to be applied in real world problems.
+This repository is about projects related to my subjects at IFG.
+Java projects, web apps and Android samples are available to be used as you wish
