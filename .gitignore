@@ -4,3 +4,9 @@ aula-jpa/\.classpath
 aula-jpa/\.project
 
 aula-jpa/\.settings/
+
+imc/node_modules/
+
+imc/data.db
+
+imc/package-lock.json

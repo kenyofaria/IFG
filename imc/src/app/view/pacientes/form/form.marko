@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="/estatico/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="/estatico/css/fontawesome.min.css" />
+        <link rel="stylesheet" href="/estatico/css/imc.css" />
+    </head>
+<body>
+        <header class="cabecalhoPrincipal">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-4">
+                        <h1 class="logo"><img src="/estatico/imagens/logo-cabecalhoPrincipal.jpg" alt="IMC" /></h1>
+                    </div>
+                    <div class="cabecalhoPrincipal-navegacao col-8">
+                        <a href="#" class="login">
+                            <i class="fas fa-sign-in-alt"></i>Login
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+        <main class="conteudoPrincipal">
+            <div class="container">
+                <h1>Cadastro de pacientes</h1>
+                <div if(data.errosValidacao)>
+                    <div class="alert alert-danger" for(erro in data.errosValidacao)>
+                        ${erro.param} - ${erro.msg}
+                    </div>
+                </div>
+                <form action="/pacientes/form" method="post">
+                    <div if(data.paciente.id)>
+                        <input type="hidden" name="_method" value="PUT">
+                        <input type="hidden" name="id" value="${data.paciente.id}">
+                    </div>
+                    <div class="form-group">
+                        <label for="nome">nome:</label>
+                        <input value="${data.paciente.nome}" 
+                            type="text" id="nome" name="nome" 
+                                placeholder="informe o nome" 
+                                    class="form-control"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="peso">peso:</label>
+                        <input value="${data.paciente.peso}" type="text" id="peso" name="peso" placeholder="0.0" class="form-control"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="altura">altura:</label>
+                        <input value="${data.paciente.altura}" type="text" id="altura" name="altura" placeholder="0.0" class="form-control"/>
+                    </div>
+                    <input type="submit" value="Salvar" class="btn btn-primary"/>
+                </form>
+            </div>
+        </main>
+
+</body>
+</html>
