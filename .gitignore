@@ -10,3 +10,5 @@ imc/node_modules/
 imc/data.db
 
 imc/package-lock.json
+
+threads-samples/.classpath
