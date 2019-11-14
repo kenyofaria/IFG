@@ -12,3 +12,5 @@ imc/data.db
 imc/package-lock.json
 
 threads-samples/.classpath
+
+swing-samples/.classpath
